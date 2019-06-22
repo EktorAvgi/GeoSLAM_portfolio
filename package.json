@@ -1,0 +1,14 @@
+{
+  "name": "6_responsiveportofolio",
+  "version": "1.0.0",
+  "description": "Responsive Tutorial Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Ektor Avgi",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
