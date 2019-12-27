@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #000;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #f2f2f2;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #fff;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -57,12 +57,14 @@
       height: 250px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 3px #f2911e; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #f2911e; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -70,9 +72,11 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 500;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: #f2911e; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -90,8 +94,8 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
-  color: #fff;
+  background: #fff;
+  color: #000;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -108,7 +112,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(255, 255, 255, 0.75); }
 
 h1,
 h2,
@@ -124,10 +128,10 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(255, 255, 255, 0.5); }
 
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none; }
 
 header {
@@ -136,7 +140,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #f2911e; }
 
 main {
   padding: 4rem;
@@ -146,7 +150,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #f2911e;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -162,7 +166,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #eece1a 3px solid; }
+    border: #f2911e 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -173,9 +177,9 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: #f2f2f2;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #f2911e 5px solid; }
 
 .projects {
   display: grid;
@@ -183,11 +187,31 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
-    border: 3px #fff solid; }
+    border: 3px #fff solid;
+    border-color: #b3b3b3; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #eece1a;
+      border-color: #f2911e;
       transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px gray solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #f2911e;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -195,22 +219,22 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
+    background: #f2911e;
     color: #000; }
 
 .btn-dark {
-  background: black;
-  color: #fff; }
+  background: #cccccc;
+  color: #000; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: white;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
+  background: #e6e6e6;
+  color: #000;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {

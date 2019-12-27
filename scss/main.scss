@@ -34,7 +34,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: set-text-color($primary-color);
   text-decoration: none;
 }
 
@@ -107,7 +107,7 @@ main {
   }
 
   .job {
-    background: lighten($primary-color, 5);
+    background: darken($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
@@ -122,11 +122,39 @@ main {
   img {
     width: 100%;
     border: 3px #fff solid;
+    border-color: darken($primary-color, 30);
 
     &:hover {
       opacity: 0.5;
       border-color: $secondary-color;
       @include easeOut;
+    }
+  }
+}
+
+// Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px darken($primary-color, 50) solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
     }
   }
 }
@@ -146,8 +174,8 @@ main {
 
 .btn-dark {
   @extend .btn;
-  background: darken($primary-color, 50);
-  color: #fff;
+  background: darken($primary-color, 20);
+  color: set-text-color($secondary-color);
 }
 
 .btn-light {
