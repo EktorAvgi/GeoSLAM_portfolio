@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/ea1e063593.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/Logo.PNG" />
+    <title>Tutorials</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item current">
+            <a href="tutorials.html" class="nav-link">Tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">How to reach us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="Tutorials">
+      <h1 class="lg-heading">
+        (Re)process data-sets<span class="text-secondary"> & Add Video</span>
+      </h1>
+    </main>
+
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <i class="fas fa-info"></i>
+          <b>More...</b>
+        </a>
+      </span>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="tutorials.html"><b>GeoSLAM HUB 5.3.x</b></a>
+      <a href="license.html">- How to check the license</a>
+      <a href="video_pc.html">- How to combine video with 3D point cloud</a>
+      <a href="merge.html">- How to merge multiple scans</a>
+      <a href="colourise.html">- Ho to colourise 3D point cloud</a>
+
+      <a href="draw.html"><b>GeoSLAM Draw</b></a>
+      <a href="draw_georeference.html">- How to georeference</a>
+      <a href="draw_colourise.html">- How to open colourised point cloud</a>
+      <a href="draw_layout_sections.html">- How to make sections and layouts</a>
+      <a href="draw_vectorise.html">- How to vectorize point cloud</a>
+      <a href="draw_export.html">- How to export in different formats</a>
+    </div>
+
+    <div id="main">
+      <h1>
+        <b style="color: #f2911e; font-size:34px">
+          Process/Reprocess and adding the video data in 3D point cloud
+        </b>
+      </h1>
+      <br />
+
+      <h2>
+        <b style="color: #f2911e; font-size:25px">Processing data-sets</b>
+      </h2>
+      <h2>
+        To process your data-sets and see the 3D point cloud results, users will
+        need to download the raw data from the data logger in the usb stick and
+        copy it into the local machine. Subsequently, from the local machine the
+        raw data can dragged and dropped into HUB for processing them.
+      </h2>
+
+      <h2>
+        <b>Note:</b> The raw data should be copied in the local machine and then
+        drag and drop into HUB. Users may not be able to drag and drop data from
+        either the local network or the USB stick directly.
+      </h2>
+      <br />
+      <h2>
+        <b style="color: #f2911e; font-size:25px">Reprocessing data-sets</b>
+      </h2>
+      <h2>
+        Some times user may get incorrect output results by processing data-sets
+        with the default parameters. Reprocessing data-sets, may help to improve
+        or fix the geometry of the output results. This some times can be time
+        consuming as the reason may not be very clear for many cases. To find a
+        solution, users need to understand the parameters that have been set in
+        the User Interface and modifying them accordingly. Since the geometry of
+        each feature is different as well as the walking speed varies for each
+        scan, each case can have different solution for parameter changes. Below
+        is the description of each parameter.
+      </h2>
+      <br />
+      <h2><b>Local Registration Options</b></h2>
+      <br />
+      <h2>
+        <b>- Convergence threshold:</b> It is the “point” at which the algorithm
+        stops the process/iterations when it meets the default value i.e. when
+        the normalised residuals of the iterations is less than the default
+        value. Increasing this parameter increases the number of iterations
+        which subsequently reduces the threshold value.
+      </h2>
+      <br />
+      <h2>
+        <b>- Window size:</b> This parameter is a combination of 3
+        sub-parameters. It depends on the duration size of the window, the
+        duration of the window that will be shifted for each iteration during
+        the local phase and the duration of the previous surface element data
+        that is been used as a set of fixed view. This impacts directly on how
+        much each part of the trajectory will be optimised for the next
+        portion/part. It is effectively the accuracy against the time slider for
+        which increasing this value the algorithm will consider using bigger
+        samples of data during each processing step. Though increasing it will
+        require more memory otherwise it will end with an error message.
+      </h2>
+      <br />
+      <h2>
+        <b>- Voxel Density:</b> This parameter defines the size of the smaller
+        volume element that should be used to compute subsequently the surface
+        elements that the scanner has acquired. Increasing this parameter will
+        make the algorithm to consider smaller volume elements for the
+        computation and force more detail to be detected at close range.
+        However, depending on the environment and the requirement this can be
+        changed i.e. smaller values increase the mapping speed but not the
+        accuracy unfortunately.
+      </h2>
+      <br />
+      <h2>
+        <b>- Rigidity:</b> This parameter is related to noise removing
+        constraint by changing subsequently the angular velocity and the
+        acceleration of the laser scanner head. Increasing this parameter will
+        cause the algorithm to be more tightly constraint and subsequently more
+        “rigid” during the local registration phase. In other words, the
+        algorithm will be more influenced by the collected from the IMU and less
+        influenced by the data collected from the sensor of the laser scanner
+        head when estimating the trajectory.
+      </h2>
+      <br />
+      <h2>
+        <b>- Maximum Range (metres):</b> This parameter enables the user to
+        define the range of points that will be included for the computation of
+        the final point cloud. The range is calculated as the distance between
+        the features and the trajectory. Points which belong further away from
+        the maximum range will be ignored from the final output. It is useful
+        for cases where the feature-buildings are relatively small.
+      </h2>
+      <br />
+      <img src="img/parameters_1.jpg" alt="UI" class="parameters_1" /><br />
+      <h2>
+        <b>- Modifying bounding box:</b> With this parameter the user can change
+        the default bound box used in order to eliminate the operator from the
+        scan. By default, the bounding box is set to exclude points collected
+        from human operator from the actual scan (points inside the bounding box
+        are ignored). It can also help on cases where the user scans manholes
+        due to the size of them.
+      </h2>
+      <h2>
+        Increasing the bounding box dimensions helps to eliminate more points
+        around the scanner mounted on UAVs, cradles or other systems. If narrow
+        spaces are scanned, reducing the bounding box will include the points at
+        the closer range (points close to the scanner), though might also
+        introduce noise points when it is too small.
+      </h2>
+      <br />
+      <h2>
+        <b>- Range filter slop:</b> This parameter is responsible of “removing”
+        or better filter out ghost points. By default, the algorithm discards
+        outlier points or points which do not appear to be part of a continuous
+        surface. As a result, the feature is responsible for providing more
+        clean output results. In environments such as forestry or stockpile, the
+        results can be significant cleaner.
+      </h2>
+      <br />
+      <h2>
+        <b>- Prioritise laser constraints:</b> By default, this parameter is
+        disabled for Horizon processing data. For RT collected data, in certain
+        cases (depending on the geometry of the feature and the duration of the
+        scan), it can help for improving the output results. As it had appeared
+        in the first place on the results that the user had seen while he was
+        scanning.
+      </h2>
+      <br />
+      <h2>
+        <b>- End processing early:</b> This parameter can help to generate
+        output results by forcing the algorithm to end the processing operation
+        earlier. This option can be used in cases of slip or drift at the end or
+        at some point during the scan. User can insert time after which the
+        processing will finish and everything that was captured after that
+        certain time will be ignored.
+      </h2>
+      <h2>
+        In our newest version of HUB, an error message will appear with the time
+        that something went wrong. The user can then reprocess again the raw
+        data by setting the time to finish earlier in order to get output
+        results.
+      </h2>
+      <h2>
+        <b>Note:</b> Start/Finished closed loop must be unticked when using this
+        option.
+      </h2>
+      <br />
+      <img src="img/parameters_2.jpg" alt="UI" class="parameters_1" /><br />
+
+      <h2>
+        <b style="color: #f2911e; font-size:25px"
+          >Global Registration Options</b
+        >
+      </h2>
+      <br />
+      <h2>
+        <b>- Prioritise planar surfaces:</b> Selecting this option will cause
+        the algorithm to only match very planar surfaces during the global
+        registration phase. This can help improve the global registration of
+        very large data sets assuming there are enough points to define planar
+        surfaces at the points where there is loop closure.
+      </h2>
+      <h2>
+        The parameter restricts 2 surface elements so that their positions are
+        planar with respect to each other’s normal. This indicates that the
+        movement along the plane is fine (See below).
+      </h2>
+      <br />
+      <img src="img/parameters_3.jpg" alt="UI" class="parameters_1" /><br />
+
+      <h2>
+        <b>- Start/Finish closed loop:</b> The default for this setting is
+        enabled. Disable this setting if the end of the scan is not in the same
+        location as the start. This checkbox, when checked by default will force
+        the start and end points to be pulled together before the start of the
+        Global registration.
+      </h2>
+      <br />
+      <img src="img/parameters_4.jpg" alt="UI" class="parameters_1" /><br />
+
+      <h2>
+        <b>- Convergence threshold:</b> It is the “point” at which the algorithm
+        stops the process/iterations when it meets the default value i.e. when
+        the normalised residuals of the iterations is less than the default
+        value. Increasing this parameter increases the number of iterations
+        which subsequently reduces the threshold value.
+      </h2>
+      <br />
+      <h2>
+        <b>- Rigidity:</b> This parameter is related to noise removing
+        constraint by changing subsequently the angular velocity and the
+        acceleration of the laser scanner head. Increasing this parameter will
+        cause the algorithm to be more tightly constraint and subsequently more
+        “rigid” during the local registration phase. In other words, the
+        algorithm will be more influenced by the collected from the IMU and less
+        influenced by the data collected from the sensor of the laser scanner
+        head when estimating the trajectory.
+      </h2>
+      <br />
+      <h2>
+        <b>- Draft mode:</b> This parameter responsible for producing faster
+        output results, but not accurate as it computes points acquired from
+        less rings during the scan.
+      </h2>
+      <br />
+
+      <h2>
+        <b style="color: #f2911e; font-size:25px">Adding Video</b>
+      </h2>
+      <h2>
+        After processing the raw data, users may add video in order to implement
+        semantic information in the 3D point cloud as the point cloud itself
+        represents pure geometry of the feature(s). This can be done only in
+        cases where there is CAM IMU information recorded in the raw data. To be
+        sure that the data is been recorded, users can see - after processing
+        the data - if there is camera icon in your data (see below the
+        screenshot). Once the video data will be added for the purpose of
+        colourisation, users will be able to see the painting palette which
+        indicates that the point cloud is been colourised.
+      </h2>
+      <br />
+      <img src="img/video_PC_1.JPG" alt="UI" class="parameters_1" /><br />
+
+      <h2>
+        An example is depicted below.
+      </h2>
+      <br />
+      <img src="img/video_PC_2.JPG" alt="UI" class="parameters_2" /><br />
+    </div>
+
+    <script>
+      function openSlideMenu() {
+        document.getElementById("side-menu").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+      }
+
+      function closeSlideMenu() {
+        document.getElementById("side-menu").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+
+    <footer id="main-footer">
+      Copyright &copy; 2019 - GeoSLAM Ltd. (Avgitidis S. Ektoras)
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

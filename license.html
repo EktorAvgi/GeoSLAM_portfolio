@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/ea1e063593.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/Logo.PNG" />
+    <title>Tutorials</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item current">
+            <a href="tutorials.html" class="nav-link">Tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">How to reach us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="Tutorials">
+      <h1 class="lg-heading">
+        Activate/Deactivate<span class="text-secondary"> SW License</span>
+      </h1>
+    </main>
+
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <i class="fas fa-info"></i>
+          <b>More...</b>
+        </a>
+      </span>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="tutorials.html"><b>GeoSLAM HUB 5.3.x</b></a>
+      <a href="license.html">- How to check the license</a>
+      <a href="video_pc.html">- How to combine video with 3D point cloud</a>
+      <a href="merge.html">- How to merge multiple scans</a>
+      <a href="colourise.html">- Ho to colourise 3D point cloud</a>
+
+      <a href="draw.html"><b>GeoSLAM Draw</b></a>
+      <a href="draw_georeference.html">- How to georeference</a>
+      <a href="draw_colourise.html">- How to open colourised point cloud</a>
+      <a href="draw_layout_sections.html">- How to make sections and layouts</a>
+      <a href="draw_vectorise.html">- How to vectorize point cloud</a>
+      <a href="draw_export.html">- How to export in different formats</a>
+    </div>
+
+    <div id="main">
+      <h1>
+        <b style="color: #f2911e; font-size:34px">
+          Installing/Activating/Deactivating of the Software License.
+        </b>
+      </h1>
+      <br />
+
+      <h2>
+        <b style="color: #f2911e; font-size:25px"
+          >Installation of the License</b
+        >
+      </h2>
+      <h2>
+        The installation process is very simple and can be found in the user
+        manual. The user just need to run the executable bundle add the license
+        number that is been given in a document as you may see below.
+
+        <img src="img/license_1.JPG" alt="license_1" class="license_1" />
+      </h2>
+      <br />
+      <h2>
+        <b style="color: #f2911e; font-size:25px"
+          >Activating & Deactivating the License</b
+        >
+      </h2>
+      <h2>
+        This process is for enabling different machines which are on different
+        geo-graphic locations to process data-sets. It is very important for the
+        users to de-activate initially the license from one machine (machine A)
+        in order to activate it on another (machine B). On any other case,
+        please contact support to return the license.
+      </h2>
+      <br />
+      <img src="img/Acti_Deact.JPG" alt="Acti_Deact" class="Acti_Deact" /><br />
+    </div>
+
+    <script>
+      function openSlideMenu() {
+        document.getElementById("side-menu").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+      }
+
+      function closeSlideMenu() {
+        document.getElementById("side-menu").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+
+    <footer id="main-footer">
+      Copyright &copy; 2019 - GeoSLAM Ltd. (Avgitidis S. Ektoras)
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

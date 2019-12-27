@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/ea1e063593.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/Logo.PNG" />
+    <title>Tutorials</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item current">
+            <a href="tutorials.html" class="nav-link">Tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">How to reach us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="Tutorials">
+      <h1 class="lg-heading">How<span class="text-secondary"> To ...</span></h1>
+    </main>
+
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <i class="fas fa-info"></i>
+          <b>More...</b>
+        </a>
+      </span>
+
+      <!-- <ul class="navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul> -->
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="#"><b>GeoSLAM HUB 5.3.x</b></a>
+      <a href="license.html"
+        >- How to check & combine video with 3D point cloud</a
+      >
+      <a href="#">- How to merge multiple scans</a>
+      <a href="#">- Ho to colourise 3D point cloud</a>
+
+      <a href="#"><b>GeoSLAM Draw</b></a>
+      <a href="#">- How to georeference</a>
+      <a href="#">- How to open colourised point cloud</a>
+      <a href="#">- How to make sections and layouts</a>
+      <a href="#">- How to vectorize point cloud</a>
+      <a href="#">- How to export in different formats</a>
+    </div>
+
+    <div id="main">
+      <h1>
+        <b>
+          This section will help users with quick fixes and solutions for common
+          issues
+        </b>
+      </h1>
+      <h2>
+        Scanning is a process which may have multiple aspects that users may not
+        take account when they start the scanning process. Each scanning may
+        have different purpose such as indivual scans, scans with the purpose of
+        merging or scans for colourising purpose. Indiidual scans can be
+        considered as the simplest ones as the data-sets do not need to be
+        combined directly with another data of any format, but rather for
+        post-processing projects such as visualisation either 2D sections or
+        layouts or 3D for collection information related to the geometry of the
+        environment or the feature that is been scanned.
+      </h2>
+      <br />
+      <h2><b>Individual scans</b></h2>
+      <h2>
+        Is the process of collecting the geometry of 3D objects within an
+        environment the user is in. It can capture free-form shapes and quickly
+        generate a highly accurate 3D point cloud through a specialised
+        software. The results appear - depending on the scan duration - in
+        thousands or million of points representing the feature in 3D. Its
+        purpose can be for inspection through the application software in PDF
+        format report colouring deviations.
+      </h2>
+      <br />
+      <h2><b>Merge multiple scans</b></h2>
+      <h2>
+        Is the process of collecting multiple scans and register them to each
+        other either in local or in any geodetic system. Key point in such scans
+        is to have control points such as spherical targets or checkerboard
+        targets based on which the registration process may be applied. The
+        merging process can be devided into two parts. The rigid transformation
+        (HUB & Draw) and the non-rigid transformation (HUB). The rigid
+        transformation is based on control points where the user can apply in
+        Draw by importing the coordinates of certain known targets (Draw); or
+        move the point cloud (align close to the reference one) in the all 3
+        axis until the point clouds will meet (approximately) each other (HUB).
+        Subsequently, the algorithm will apply the non-rigid transformation
+        where it introcuces the matching feature algorithm automatically. In
+        this part, it is very important for the user to have overlaps i.e. 30%
+        so the algorithm can detect enough features for the registration
+        purpose.
+      </h2>
+      <br />
+      <h2><b>Scans for colourisation purpose</b></h2>
+      <h2>
+        Is the process of collecting video in addition to point cloud for the
+        purpose of either the colourisation or the combination of video next to
+        3D point cloud. The colourisation process is a bit different as the
+        camera has smaller field of view compared to the laser scanner sensor.
+        Hence, the user should point on different directions the device so the
+        camera can collect frames of the same object from different point of
+        views. The walking speed should also be sloewer compared to the
+        individual scans.
+      </h2>
+      <br />
+    </div>
+
+    <script>
+      function openSlideMenu() {
+        document.getElementById("side-menu").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+      }
+
+      function closeSlideMenu() {
+        document.getElementById("side-menu").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+
+    <footer id="main-footer">
+      Copyright &copy; 2019
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

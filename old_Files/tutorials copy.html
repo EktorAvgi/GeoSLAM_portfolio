@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />     
+    <script src="https://kit.fontawesome.com/ea1e063593.js"></script>
+ 
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="img/Logo.PNG" />
+    <title>Tutorials</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <body>
+        <header>
+          <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+          </div>
+    
+          <nav class="menu">
+            <div class="menu-branding">
+              <div class="portrait"></div>
+            </div>
+            <ul class="menu-nav">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="work.html" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item current">
+                <a href="tutorials.html" class="nav-link">Tutorials</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">How to reach us</a>
+              </li>
+            </ul>
+          </nav>
+        </header> 
+    
+        <main id="Tutorials">
+            <h1 class="lg-heading">How<span class="text-secondary"> To...</span></h1>
+            <h2 class="sm-heading">Tutorials</h2>
+        </main>
+
+        <script src="js/main.js"></script>
+
+
+
+
+        <nav class="navbar">
+                <a href="#" onclick="openSlideMenu()">More tutorials</a>            
+        </nav>
+
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a href="#">GeoSLAM HUB 5.3.x</a>
+            <a href="#">GeoSLAM Draw</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- <div id="main">
+            <h1>Reponsive</h1>
+        </div> -->
+
+        <script>
+            function openSlideMenu(){
+                document.getElementById('side-menu').style.width = "275px";
+                document.getElementById('main').style.marginLeft = "275px";
+            }
+
+            function closeSlideMenu(){
+                document.getElementById('side-menu').style.width = "0";
+                document.getElementById('main').style.marginLeft = "0";
+            }
+        </script>
+
+        <!-- <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Tutorials</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>How to...</p>
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">GeoSLAM HUB 5.3.x</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="https://www.youtube.com/watch?v=LmxHpPzrA-U&index=6&list=PLTjw7D7DymlzuL7aGcOOgMvt-FX00UUhN">home1</a>
+                            </li>
+                            <li>
+                                <a href="#">How to check & combine video with 3D point cloud</a>
+                            </li>
+                            <li>
+                                <a href="#">How to merge multiple scans</a>
+                            </li>
+                            <li>
+                                <a href="#">Ho to colourise 3D point cloud</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">GeoSLAM Draw</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">How to georeference</a>
+                            </li>
+                            <li>
+                                <a href="#">How to open colourised point cloud</a>
+                            </li>
+                            <li>
+                                <a href="#">How to make sections and layouts</a>
+                            </li>
+                            <li>
+                                <a href="#">How to vectorize point cloud</a>
+                            </li>
+                            <li>
+                                <a href="#">How to export in different formats</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li>
+                        <a href="#" class="download">Download</a>
+                    </li>
+                </ul>
+            </nav>
+        </div> -->
+  </body>
+</html>

@@ -1,0 +1,111 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  border-bottom: 5px solid #f2911e;
+  overflow-x: hidden;
+}
+
+.navbar {
+  margin: 15px;
+  padding-top: 7px;
+  background-color: #f2911e;
+  overflow: hidden;
+  height: 40px;
+  width: 285px;
+  border-radius: 35px;
+  text-align: center;
+}
+
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  border-radius: 15px;
+  border-bottom: 5px solid #f2911e;
+}
+
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ccc;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #f2911e;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 3px solid #f2911e;
+  border-radius: 15px;
+}
+
+.license_1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  border: 3px solid #f2911e;
+  border-radius: 15px;
+}
+
+.Acti_Deact {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border: 3px solid #f2911e;
+  border-radius: 15px;
+}
+
+.parameters_1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 3px solid #f2911e;
+  border-radius: 15px;
+}
+
+.parameters_2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border: 3px solid #f2911e;
+  border-radius: 15px;
+}
+/* @media (min-width: 568px) {
+  .open-slide {
+    display: none;
+  }
+} */

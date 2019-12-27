@@ -1,0 +1,131 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  position: fixed;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #000;
+}
+
+/* p {
+  margin: 0px auto;
+  position: relative;
+  left: 0;
+  top: -100%;
+  padding-top: 0px;
+  width: 60%;
+} */
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.5;
+}
+
+.navbar {
+  padding: 78px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0, 1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+.bio {
+  position: relative;
+  float: right;
+  width: 80%;
+  top: 40px;
+}
+
+#sidebar {
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 400px;
+  max-width: 400px;
+  background: #fff;
+  color: #000;
+  transition: all 0.5s;
+}
+
+#sidebar.active {
+  margin-left: -470px;
+  opacity: 0.5;
+}
+
+#sidebar .sidebar-header {
+  padding: 8px;
+  padding-top: 15px;
+  border-radius: 5px;
+  text-align: center;
+  background: #f2911e;
+  color: #fff;
+}
+
+#sidebar ul.components {
+  border-radius: 5px;
+  padding: 20px 0px;
+  border-bottom: 1px solid #f2911e;
+}
+
+#sidebar ul p {
+  padding: 10px;
+  font-size: 1.1.em;
+  display: block;
+}
+#sidebar ul li a:hover {
+  padding: 2px;
+  border-radius: 5px;
+  color: #fff;
+  background: #f2911e;
+  transition: 0.5s;
+}
+/* #sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #000;
+  background: #f2911e;
+} */
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 60%;
+  right: -15px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  border-radius: 5px;
+  padding-left: 30px;
+  background: none;
+}

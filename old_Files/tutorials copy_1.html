@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/ea1e063593.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="img/Logo.PNG" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Tutorials</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item current">
+            <a href="tutorials.html" class="nav-link">Tutorials</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">How to reach us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="Tutorials">
+      <h1 class="lg-heading">
+        How<span style="color: #f2911e;font-size:6rem"> To...</span>
+      </h1>
+
+      <div class="wrapper">
+        <nav id="sidebar">
+          <div class="sidebar-header">
+            <h3>Tutorials</h3>
+          </div>
+
+          <ul class="list-unstyled components">
+            <!-- <p>Heading</p> -->
+            <li class="active">
+              <a
+                href="#homeSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                ><b> GeoSLAM HUB 5.3.x</b></a
+              >
+
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                  <a href="license.html">- Ensure License</a>
+                </li>
+                <li>
+                  <a href="#"
+                    >- How to check & combine video with 3D point cloud</a
+                  >
+                </li>
+                <li>
+                  <a href="#">- How to merge multiple scans</a>
+                </li>
+                <li>
+                  <a href="#">- Ho to colourise 3D point cloud</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="#pageSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                ><b>GeoSLAM Draw</b></a
+              >
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                  <a href="#">- How to georeference</a>
+                </li>
+                <li>
+                  <a href="#">- How to open colourised point cloud</a>
+                </li>
+                <li>
+                  <a href="#">- How to make sections and layouts</a>
+                </li>
+                <li>
+                  <a href="#">- How to vectorize point cloud</a>
+                </li>
+                <li>
+                  <a href="#">- How to export in different formats</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#"><b>Contact Us</b></a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fas fa-info"></i>
+            </button>
+          </nav>
+        </div>
+      </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"
+      ></script>
+      <script src="js/main.js"></script>
+    </main>
+
+    <footer id="main-footer">
+      Copyright &copy; 2019
+    </footer>
+
+    <script>
+      $(document).ready(function() {
+        $("#sidebarCollapse").on("click", function() {
+          $("#sidebar").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
