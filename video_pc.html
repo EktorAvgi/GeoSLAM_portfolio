@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/Logo.PNG" />
     <title>Tutorials</title>
+    <script src="js/index.js"></script>
   </head>
 
   <body>
@@ -60,19 +61,60 @@
     </nav>
 
     <div id="side-menu" class="side-nav">
-      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-      <a href="tutorials.html"><b>GeoSLAM HUB 5.3.x</b></a>
-      <a href="license.html">- How to check the license</a>
-      <a href="video_pc.html">- How to combine video with 3D point cloud</a>
-      <a href="merge.html">- How to merge multiple scans</a>
-      <a href="colourise.html">- Ho to colourise 3D point cloud</a>
+      <div class="search-bar">
+        <input
+          type="text"
+          name="search"
+          value=""
+          autocomplete="off"
+          id="myinput"
+          onkeyup="searchFunction()"
+          placeholder="Search feature..."
+        />
+      </div>
+      <br />
+      <br />
+      <br />
 
-      <a href="draw.html"><b>GeoSLAM Draw</b></a>
-      <a href="draw_georeference.html">- How to georeference</a>
-      <a href="draw_colourise.html">- How to open colourised point cloud</a>
-      <a href="draw_layout_sections.html">- How to make sections and layouts</a>
-      <a href="draw_vectorise.html">- How to vectorize point cloud</a>
-      <a href="draw_export.html">- How to export in different formats</a>
+      <ul id="wrapper">
+        <li>
+          <a href="tutorials.html"><b>GeoSLAM HUB</b></a>
+        </li>
+        <li>
+          <a href="license.html">How to check the license</a>
+        </li>
+        <li>
+          <a href="video_pc.html">How to (re)process and add video</a>
+        </li>
+        <li>
+          <a href="merge.html">How to merge multiple scans</a>
+        </li>
+        <li>
+          <a href="colourise.html">How to colourise 3D point cloud</a>
+        </li>
+
+        <li>
+          <a href="draw.html"><b>GeoSLAM Draw</b></a>
+        </li>
+        <li>
+          <a href="draw_georeference.html">How to georeference</a>
+        </li>
+        <li>
+          <a href="draw_colourise.html">How to open colourised point cloud</a>
+        </li>
+        <li>
+          <a href="draw_layout_sections.html"
+            >How to make sections and layouts</a
+          >
+        </li>
+        <li>
+          <a href="draw_vectorise.html">How to vectorize point cloud</a>
+        </li>
+        <li>
+          <a href="draw_export.html">How to export in different formats</a>
+        </li>
+      </ul>
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
     </div>
 
     <div id="main">
