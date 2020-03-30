@@ -8,6 +8,4 @@ The website is responsive and it is been made based on SCSS mainly snd a bit of 
 
 Libraries for the examples are based on Potree and Traversy courses. 
 
-To check the results, please click on the link here
-https://ektoravgi.github.io/GeoSLAM_portfolio/work.html
 
