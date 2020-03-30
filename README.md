@@ -1,4 +1,4 @@
-GeoSLAM portfolio - To check the results, please click on the link here
+GeoSLAM portfolio - To check the results, please click on the link below.
 
 # https://ektoravgi.github.io/GeoSLAM_portfolio/work.html
 
