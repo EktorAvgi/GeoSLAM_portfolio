@@ -1,4 +1,6 @@
-# GeoSLAM_portfolio
+GeoSLAM portfolio - To check the results, please click on the link here
+
+# https://ektoravgi.github.io/GeoSLAM_portfolio/work.html
 
 This website is for education purpose only and under no circumstances is been commercialised for any purpose. 
 
